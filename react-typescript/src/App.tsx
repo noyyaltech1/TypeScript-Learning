@@ -13,6 +13,7 @@ import { ThemeContextProvider } from './components/context/ThemeContext';
 import { Box } from './components/context/Box';
 import { Private } from './components/component-props/Private';
 import { Profile } from './components/component-props/Profile';
+import { EventForm } from './components/form/eventForm';
 
 function App() {
   const names = [
@@ -22,7 +23,7 @@ function App() {
     ]
   return (
     <div className="App">
-      <h2>Passing props</h2>
+      {/* <h2>Passing props</h2>
       <Greet name="John"  isLoggedIn={true} />
       <h2>Passing props as an object</h2>
       <Person first="John" last="Doe" />
@@ -46,8 +47,8 @@ function App() {
         <Box/>
       </ThemeContextProvider>
       <h3>Component Props</h3>
-      <Private isLoggedIn={true} component={Profile}/>
-
+      <Private isLoggedIn={true} component={Profile}/> */}
+      <EventForm/>
     </div>
   );
 }
