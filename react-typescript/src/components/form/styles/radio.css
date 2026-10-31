@@ -1,0 +1,17 @@
+.radio-wrapper{
+     width: 500px;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+.radio-label{
+    font-size: 14px;
+    font-weight: 600;
+    color: #2d64bd;
+}
+.radio-control{
+ width: 100px;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}

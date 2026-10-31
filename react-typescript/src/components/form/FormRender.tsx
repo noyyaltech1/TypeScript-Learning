@@ -1,6 +1,11 @@
 
 import type { FormRendererProps } from './types';
-
+import './styles/text-input.css';
+import './styles/check-box.css';
+import './styles/drop-down.css';
+import './styles/radio.css';
+import './styles/text-area.css';
+//import './styles/Form.css'
 export const FormRenderer = <T extends object,>({
     fields,
     values,
@@ -10,6 +15,7 @@ export const FormRenderer = <T extends object,>({
 
     return (
         <>
+        <div className="form-container">
             {fields.map(field => {
 
                 const value = values[field.name];
@@ -24,12 +30,13 @@ export const FormRenderer = <T extends object,>({
                     case 'date':
 
                         return (
-                            <div key={field.name}>
-                                <label htmlFor={field.name}>
+                            <div key={field.name} className="text-input-wrapper">
+                                <label htmlFor={field.name} className="text-input-label">
                                     {field.label}
                                 </label>
 
                                 <input
+                                    className="text-input"
                                     id={field.name}
                                     type={field.type}
                                     value={String(value ?? '')}
@@ -51,12 +58,13 @@ export const FormRenderer = <T extends object,>({
                     case 'number':
 
                         return (
-                            <div key={field.name}>
-                                <label htmlFor={field.name}>
+                            <div key={field.name} className="text-input-wrapper">
+                                <label htmlFor={field.name} className="text-input-label">
                                     {field.label}
                                 </label>
 
                                 <input
+                                    className="text-input"
                                     id={field.name}
                                     type="number"
                                     value={value === null ? '' : Number(value)}
@@ -82,12 +90,13 @@ export const FormRenderer = <T extends object,>({
                     case 'select':
 
                         return (
-                            <div key={field.name}>
-                                <label htmlFor={field.name}>
+                            <div key={field.name} className='dropdown-wrapper' >
+                                <label htmlFor={field.name} className='dropdown-label' >
                                     {field.label}
                                 </label>
 
                                 <select
+                                    className='dropdown-control'
                                     id={field.name}
                                     value={String(value ?? '')}
                                     required={field.rules?.required}
@@ -118,12 +127,13 @@ export const FormRenderer = <T extends object,>({
                     case 'radio':
 
                         return (
-                            <fieldset key={field.name}>
+                            <fieldset key={field.name} className='radio-wrapper'>
                                 <legend>{field.label}</legend>
 
                                 {field.options.map(option => (
-                                    <label key={option.value}>
+                                    <label key={option.value} className='radio-label'>
                                         <input
+                                            className='radio-control'
                                             type="radio"
                                             name={field.name}
                                             value={option.value}
@@ -147,12 +157,13 @@ export const FormRenderer = <T extends object,>({
                     case 'textarea':
 
                         return (
-                            <div key={field.name}>
-                                <label htmlFor={field.name}>
+                            <div key={field.name} className='textarea-wrapper'>
+                                <label htmlFor={field.name} className='textarea-label'>
                                     {field.label}
                                 </label>
 
                                 <textarea
+                                    className='textarea-control'
                                     id={field.name}
                                     value={String(value ?? '')}
                                     rows={field.rows ?? 4}
@@ -174,9 +185,10 @@ export const FormRenderer = <T extends object,>({
                     case 'checkbox':
 
                         return (
-                            <div key={field.name}>
-                                <label>
-                                    <input
+                            <div key={field.name} className="checkbox-wrapper">
+                                <label className="checkbox-label">
+                                    <input 
+                                        className="checkbox-control"
                                         type="checkbox"
                                         checked={value === true}
                                         required={field.rules?.required}
@@ -197,6 +209,7 @@ export const FormRenderer = <T extends object,>({
                    
                 }
             })}
+            </div>
         </>
     );
 };
