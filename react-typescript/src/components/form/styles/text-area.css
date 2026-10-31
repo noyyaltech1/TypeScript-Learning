@@ -1,0 +1,17 @@
+.textarea-wrapper{
+     width: 500px;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+.textarea-label{
+    font-size: 14px;
+    font-weight: 600;
+    color: #d4350d;
+}
+.textarea-control{
+    width: 500px;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}

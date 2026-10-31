@@ -1,0 +1,22 @@
+.text-input-wrapper {
+    background-color: #f9fafb;
+    padding: 10px;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+
+.text-input-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #bd16a1;
+}
+
+.text-input {
+    width: 500px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
