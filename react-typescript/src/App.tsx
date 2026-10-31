@@ -11,6 +11,8 @@ import { User } from './components/state/User';
 import { Usereduser } from './components/state/Usereduser';
 import { ThemeContextProvider } from './components/context/ThemeContext';
 import { Box } from './components/context/Box';
+import { Private } from './components/component-props/Private';
+import { Profile } from './components/component-props/Profile';
 
 function App() {
   const names = [
@@ -43,6 +45,8 @@ function App() {
       <ThemeContextProvider>
         <Box/>
       </ThemeContextProvider>
+      <h3>Component Props</h3>
+      <Private isLoggedIn={true} component={Profile}/>
 
     </div>
   );
