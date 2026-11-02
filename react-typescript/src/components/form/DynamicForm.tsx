@@ -3,6 +3,7 @@ import type { FieldConfig } from './types';
 import { FormRenderer } from './FormRender'
 import { useForm } from './hooks/useForm';
 import './styles/button.css';
+
 type DynamicFormProps<T extends object> = {
     initialValues: T;
     fields: FieldConfig<T>[];
@@ -24,8 +25,8 @@ export const DynamicForm = <T extends object,>({
     } = useForm(initialValues, fields);
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+   
     event.preventDefault();
-
     console.log('Submit button clicked');
     console.log('Current values:', values);
 
@@ -37,9 +38,12 @@ export const DynamicForm = <T extends object,>({
     if (isValid) {
         console.log('Form is valid');
         onSubmit?.(values);
+        resetForm();
     } else {
         console.log('Form validation failed');
     }
+
+
 };
     return (
         <form onSubmit={handleSubmit} >
@@ -50,14 +54,15 @@ export const DynamicForm = <T extends object,>({
                 errors={errors}
                 onChange={handleChange}
             />
-
-            <button type="submit" className="submit-button">
+            <div className="button-container">
+            <button type="submit" className="submit-button" >
                 Submit
             </button>
            
             <button type="button" onClick={resetForm} className="reset-button">
                 Reset
             </button>
+            </div>
 
         </form>
     );
