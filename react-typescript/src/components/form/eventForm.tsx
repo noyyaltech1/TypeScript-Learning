@@ -9,10 +9,10 @@ const initialValues: EventFormData = {
     email: '',
     phone: '',
     age: null,
-    attendance: 'online',
-    category: 'workshop',
-    experience: 'beginner',
-    interests: [],
+    attendance: ' ',
+    category: ' ',
+    experience: ' ',
+   
     eventDate: '',
     description: '',
     terms: false
