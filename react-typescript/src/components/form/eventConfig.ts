@@ -95,6 +95,7 @@ export const eventFields :FieldConfig<EventFormData>[] = [
             { label: 'Seminar', value: 'seminar' }
         ]
     },
+    
 
     {
         name: 'experience',

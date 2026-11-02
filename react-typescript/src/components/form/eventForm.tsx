@@ -29,7 +29,7 @@ export const EventForm = () => {
 
     return (
         <div>
-            <h2>Event Registration</h2>
+            <h2 style={{ textAlign: 'center' }}>Event Registration</h2>
             
             <DynamicForm<EventFormData>
                 initialValues={initialValues}

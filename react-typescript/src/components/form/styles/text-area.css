@@ -1,7 +1,10 @@
 .textarea-wrapper{
-     width: 500px;
+     width: 100%;
+    display: flex;
+    flex-direction: column;
     gap: 7px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 .textarea-label{
     font-size: 14px;
@@ -9,9 +12,11 @@
     color: #d4350d;
 }
 .textarea-control{
-    width: 40%;
-    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 14px;
+    box-sizing: border-box;
 }
