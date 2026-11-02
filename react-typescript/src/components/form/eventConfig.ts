@@ -3,7 +3,7 @@ import type { FieldConfig } from './types';
 
 import type { EventFormData } from './eventTypes';
 
-export const eventFields = [
+export const eventFields :FieldConfig<EventFormData>[] = [
 
     {
         name: 'fullName',
@@ -77,7 +77,7 @@ export const eventFields = [
         options: [
             { label: 'Online', value: 'online' },
             { label: 'Offline', value: 'offline' },
-            { label: 'Hybrid', value: 'hybrid' }
+           
         ]
     },
 
@@ -144,4 +144,4 @@ export const eventFields = [
         }
     }
 
-] satisfies FieldConfig<EventFormData>[];
+] ;
