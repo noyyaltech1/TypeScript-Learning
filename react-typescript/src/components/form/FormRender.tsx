@@ -5,7 +5,7 @@ import './styles/check-box.css';
 import './styles/drop-down.css';
 import './styles/radio.css';
 import './styles/text-area.css';
-//import './styles/Form.css'
+import './styles/Form.css'
 export const FormRenderer = <T extends object,>({
     fields,
     values,

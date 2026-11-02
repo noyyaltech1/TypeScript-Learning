@@ -4,6 +4,7 @@ import { eventFields } from './eventConfig';
 
 import type { EventFormData } from './eventTypes';
 
+
 const initialValues: EventFormData = {
     fullName: '',
     email: '',
@@ -29,12 +30,13 @@ export const EventForm = () => {
     return (
         <div>
             <h2>Event Registration</h2>
-
+            
             <DynamicForm<EventFormData>
                 initialValues={initialValues}
                 fields={eventFields}
                 onSubmit={handleSubmit}
             />
+            
         </div>
     );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import type { FieldConfig } from './types';
 import { FormRenderer } from './FormRender'
 import { useForm } from './hooks/useForm';
+import './styles/button.css';
 type DynamicFormProps<T extends object> = {
     initialValues: T;
     fields: FieldConfig<T>[];
@@ -41,7 +42,7 @@ export const DynamicForm = <T extends object,>({
     }
 };
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} >
 
             <FormRenderer
                 fields={fields}
@@ -50,11 +51,11 @@ export const DynamicForm = <T extends object,>({
                 onChange={handleChange}
             />
 
-            <button type="submit">
+            <button type="submit" className="submit-button">
                 Submit
             </button>
-
-            <button type="button" onClick={resetForm}>
+           
+            <button type="button" onClick={resetForm} className="reset-button">
                 Reset
             </button>
 

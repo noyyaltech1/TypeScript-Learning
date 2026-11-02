@@ -1,0 +1,13 @@
+
+.form-container {
+   
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    flex-direction: column;
+    width: 500px;
+    
+}

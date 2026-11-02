@@ -1,5 +1,5 @@
 .radio-wrapper{
-     width: 500px;
+     width: 450px;
     gap: 7px;
     margin-bottom: 20px;
 }
@@ -9,7 +9,7 @@
     color: #2d64bd;
 }
 .radio-control{
- width: 100px;
+ width: 60%;
     padding: 3px;
     border: 1px solid #ccc;
     border-radius: 4px;
